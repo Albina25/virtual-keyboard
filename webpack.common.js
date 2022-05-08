@@ -8,7 +8,6 @@ module.exports = {
         title: 'Virtual Keyboard',
         filename: 'index.html',
         template: "index.html",
-        favicon: "./public/keyboard-icon.png",
       }),
     ],
     output: {
