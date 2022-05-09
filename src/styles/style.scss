@@ -48,6 +48,7 @@ $main-color: #838282;
     // height: 300px;
     overflow-y: auto;
     resize: none;
+    outline: none;
 
     &:focus {
         border: 1px solid #e7e7e7;
@@ -125,4 +126,8 @@ $main-color: #838282;
         background-color: #fff;
         color: #000;  
     }
+}
+
+.letter-lower-case {
+    text-transform: lowercase;
 }
