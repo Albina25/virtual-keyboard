@@ -1,0 +1,133 @@
+@import url("resetStyles.scss");
+$key_size: 50px;
+$main-color: #838282;
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.title-keyboard {
+    width: 100%;
+    color: $main-color;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    // border: 2px solid black;
+    padding: 5px;
+    width: 100%;
+    background-color: #e7e7e7;
+}
+
+.information {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: $main-color;
+}
+
+.text-field {
+    display: block;
+    border: 1px solid #e7e7e7;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    // height: 300px;
+    overflow-y: auto;
+    resize: none;
+    outline: none;
+
+    &:focus {
+        border: 1px solid #e7e7e7;
+    }
+}
+
+.row {
+    display: flex;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    cursor: pointer;
+    // width: 50px;
+    width: $key_size;
+    height: 50px;
+    margin: 3px;
+    padding: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: .2s;
+
+    &:hover {
+        background: lightgray;
+    }
+
+    &_backspace {
+        width: 126px;
+    }
+
+    &_tab {
+        width: 65px;
+    }
+
+    &_del {
+        width: 55px
+    }
+
+    &_capsLock {
+        flex-grow: 1.25;
+    }
+
+    &_enter {
+        flex-grow: 0.9;
+    }
+
+    &_shift-left {
+        flex-grow: 1;
+    }
+
+    &_space {
+        flex-grow: 1;
+    }
+
+}
+
+.key.active {
+    background-color: $main-color;
+    color: #fff;
+}
+
+.key.remove {
+    animation: key_animation 0.4s forwards;
+}
+
+@keyframes key_animation {
+    0% {
+        background-color: $main-color;
+        color: #fff;
+    }
+    100% {
+        background-color: #fff;
+        color: #000;  
+    }
+}
+
+.letter-lower-case {
+    text-transform: lowercase;
+}
