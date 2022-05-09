@@ -33,7 +33,6 @@ container.append(keyboard);
 
 let keyboardKeys = createNodeElement('div', 'keyboard-keys')
 
-
 function createKeysOfKeydoard() {
     keyboardKeys.remove();
     keyboardKeys = createNodeElement('div', 'keyboard-keys')
